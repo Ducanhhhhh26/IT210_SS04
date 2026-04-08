@@ -1,0 +1,5 @@
+Phân tích:
+Trong Cách A (/bai3/orders/5), số 5 nằm ở thành phần đường dẫn (URI Path) của URL và được Spring Boot chuyển đổi thông qua @PathVariable.
+Trong Cách B (/bai3/orders?id=5), số 5 nằm ở chuỗi truy vấn (Query String) đứng sau dấu hỏi chấm (?) và được trích xuất bằng @RequestParam.
+Lựa chọn phù hợp nhất:
+Để lấy chi tiết của một đối tượng cụ thể (như tìm 1 đơn hàng theo ID), Cách A kết hợp @PathVariable là phù hợp hơn. Nó tuân thủ tốt nguyên tắc thiết kế RESTful API (coi ID như một phần định danh tài nguyên trên không gian mạng). Trong khi đó, @RequestParam ở Cách B thường được ưu tiên dùng cho các tác vụ như lọc (filter), tìm kiếm, phân trang (như ở Bài 2). Do đó, tôi chọn Cách A để cài đặt.
